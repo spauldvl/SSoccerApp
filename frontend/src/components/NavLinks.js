@@ -1,4 +1,4 @@
-import { navData } from '@/constants'
+import { navData } from '../constants'
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { useState } from 'react'
