@@ -1,6 +1,6 @@
 import "./globals.css";
 import Header from "../components/Header";
-
+import MyCalendar from "@/components/Calendar";
 
 
 export const metadata = {
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <Header />
+        <MyCalendar/>
         
         {children}
       </body>
