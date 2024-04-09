@@ -1,11 +1,11 @@
 import Image from "next/image";
-import MyCalendar from "@/components/Calendar";
+import { Calendar } from "@fullcalendar/core";
 
 export default function Home() {
   return (
     <main>
       <p> 
-        <MyCalendar/>
+        
         this is our application
       </p>
     </main>
