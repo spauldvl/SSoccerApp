@@ -1,14 +1,14 @@
-import Image from "next/image";
-import { Calendar } from "@fullcalendar/core";
+'use client'
+import React from "react";
+import Calendar from "@/components/Calendar";
 
-export default function Home() {
+
+function Home() {
   return (
-    <main>
-      <p> 
-        
-        this is our application
-      </p>
-    </main>
+    <div className="Home">
+      <Calendar/>
+      </div>
   );
 }
 
+export default Home;

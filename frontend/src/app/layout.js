@@ -1,5 +1,7 @@
+
 import "./globals.css";
 import Header from "../components/Header";
+import Home from "./page";
 
 
 export const metadata = {
@@ -12,7 +14,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <Header />
-        
         
         {children}
       </body>
