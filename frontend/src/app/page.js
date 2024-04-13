@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import Calendar from "@/components/Calendar";
+import NewPractice from "@/components/NewPractice";
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
        </button>
       </div>
       <Calendar/>
+      <NewPractice/>
       </div>
       
   );
