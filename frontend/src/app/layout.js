@@ -2,6 +2,7 @@
 import "./globals.css";
 import Header from "../components/Header";
 import Home from "./page";
+import NewPractice from "@/components/NewPractice";
 
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <Header />
+        
         
         {children}
       </body>
