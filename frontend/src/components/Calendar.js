@@ -7,10 +7,17 @@ import interactionPlugin from '@fullcalendar/interaction';
 
 const Calendar = () => {
   return (
-    <div>
+    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8">
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-        initialView='dayGridMonth'
+        initialView={'dayGridMonth'}
+        headerToolbar= {{
+            start: "today prev,next",
+            center: "title",
+            end: "dayGridMonth,dayGridWeek,timeGridDay",
+        }}
+        height={"90vh"}
+
       />
     </div>
   );
