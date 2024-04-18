@@ -59,7 +59,7 @@ def get_practice_data():
     calendar_data = cursor.fetchall()
     cursor.close()
     connection.close()
-    return calendar_data
+    return {'data': calendar_data}
 
 # Create a route for adding new data to calender table
 @app.route('/practicedata', methods=["PUT"])
@@ -76,26 +76,26 @@ def add_practice_data():
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
             """,
             (
-                data['TrainingType'],
-                data['TrainingObjective'],
-                data['TrainingDuration'],
-                data['TrainingDate'],
-                data['TrainingTime'],
-                data.get('Shots', None),
-                data.get('Crosses', None),
-                data.get('Goals', None),
-                data.get('Assists', None)
+                data['trainingType'],
+                data['trainingObjective'],
+                data['duration'],
+                data['date'],
+                data['time'],
+                data.get('shots', None),
+                data.get('crosses', None),
+                data.get('goals', None),
+                data.get('assists', None)
             )
         )
         connection.commit()
         cursor.close()
         connection.close()
     
-        return 200
+        return {'status' : 200}
     except (psycopg2.Error, Exception) as e:
         # If an error occurs during database operation, handle the error and return an error message
         print("Error adding practice data:", e)
-        return 500
+        return {'status': 500}
 
 
 def create_app ():
