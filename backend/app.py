@@ -1,12 +1,16 @@
+import os
 import psycopg2
 import psycopg2.extras
 from flask import Flask, request
+from dotenv import load_dotenv
+import json
 
 app = Flask(__name__, static_url_path= '', static_folder='./../frontend/build', template_folder='./../frontend/build')
 
 def connect_to_database():
+    load_dotenv()
     try:
-        with psycopg2.connect(database="postgres", user="postgres", password="greyson14", host="localhost", port=5432) as connection:
+        with psycopg2.connect(database=os.getenv("LOCAL_DB_NAME"), user=os.getenv("LOCAL_DB_USER"), password=os.getenv("LOCAL_DB_PASS"), host=os.getenv("LOCAL_DB_HOST"), port=os.getenv("LOCAL_DB_PORT")) as connection:
             return connection
     except (psycopg2.DatabaseError, Exception) as error:
         print(error)
@@ -59,7 +63,7 @@ def get_practice_data():
     calendar_data = cursor.fetchall()
     cursor.close()
     connection.close()
-    return {'data': calendar_data}
+    return json.dumps(calendar_data, default=str)
 
 # Create a route for adding new data to calender table
 @app.route('/practicedata', methods=["PUT"])
