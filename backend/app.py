@@ -36,12 +36,12 @@ cursor.execute(
     """
     )
 # Create sample data to load in once table is created (OPTIONAL)
-cursor.execute(
-    """
-    INSERT INTO practice_details (TrainingType, TrainingObjective, TrainingDuration, TrainingDate, TrainingTime, Shots, Crosses, Goals, Assists)
-    VALUES('Team', 'Shooting and finishing', 2, '2024-04-17', '6:30:00', 4, 3, 1, 0);
-    """
-)
+#cursor.execute(
+ #   """
+ #   INSERT INTO practice_details (TrainingType, TrainingObjective, TrainingDuration, TrainingDate, TrainingTime, Shots, Crosses, Goals, Assists)
+ #   VALUES('Team', 'Shooting and finishing', 2, '2024-04-17', '6:30:00', 4, 3, 1, 0);
+ #   """
+#)
 
 connection.commit()
 cursor.close()

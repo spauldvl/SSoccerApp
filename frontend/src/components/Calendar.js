@@ -19,15 +19,15 @@ export default class Calendar extends React.Component {
     return (
       <div>
         <div>{eventInfo.event.title}</div>
-        <div>{eventInfo.event.extendedProps.trainingtype}</div>
-        <div>{eventInfo.event.extendedProps.trainingobjective}</div>
-        <div>{eventInfo.event.extendedProps.trainingduration}</div>
-        <div>{eventInfo.event.extendedProps.trainingdate}</div>
-        <div>{eventInfo.event.extendedProps.trainingtime}</div>
-        <div>{eventInfo.event.extendedProps.shots}</div>
-        <div>{eventInfo.event.extendedProps.crosses}</div>
-        <div>{eventInfo.event.extendedProps.goals}</div>
-        <div>{eventInfo.event.extendedProps.assists}</div>
+        <div>Training Type: {eventInfo.event.extendedProps.trainingtype}</div>
+        <div>Objective: {eventInfo.event.extendedProps.trainingobjective}</div>
+        <div>Duration: {eventInfo.event.extendedProps.trainingduration} min</div>
+        <div>Date: {eventInfo.event.extendedProps.trainingdate}</div>
+        <div>Time: {eventInfo.event.extendedProps.trainingtime}</div>
+        <div>Shots: {eventInfo.event.extendedProps.shots}</div>
+        <div>Crosses: {eventInfo.event.extendedProps.crosses}</div>
+        <div>Goals: {eventInfo.event.extendedProps.goals}</div>
+        <div>Assists: {eventInfo.event.extendedProps.assists}</div>
         
 
       </div>
@@ -65,7 +65,7 @@ export default class Calendar extends React.Component {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-          initialView={"dayGridMonth"}
+          initialView={"dayGridWeek"}
           events={events}
           eventContent={this.renderEventContent}
           headerToolbar={{
