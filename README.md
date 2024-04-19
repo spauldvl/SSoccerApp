@@ -37,6 +37,18 @@ How to start the application and view the web app (you may need to install Visua
 - Step 5: Click Git Clone
 - Step 6: Paste URL and press enter
 
+How to run the applicantion
+- Open Terminal
+- Navigate to frontend folder
+  - enter command npm install
+  - enter command npm run build
+- Navigate to backend folder
+  - enter command python3 -m venv venv
+  - enter command source ./venv/bin/activate
+  - enter command pip install -r requirements.txt
+  - enter command flask run
+  - Open the url from the terminal
+
 ## Usage
 [Usage instructions]
 
