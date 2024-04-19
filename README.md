@@ -30,12 +30,12 @@ All code is in the master branch
 
 ## Installation
 How to start the application and view the web app (you may need to install Visual Studio Code First)
-Step 1: Press the green code button
-Step 2: Copy HTTPS url 
-Step 3: Open Visual Studio Code
-Step 4: Click Command+Shift+P (for mac) 
-Step 5: Click Git Clone
-Step 6: Paste URL and press enter
+- Step 1: Press the green code button
+- Step 2: Copy HTTPS url 
+- Step 3: Open Visual Studio Code
+- Step 4: Click Command+Shift+P (for mac) 
+- Step 5: Click Git Clone
+- Step 6: Paste URL and press enter
 
 ## Usage
 [Usage instructions]
@@ -47,6 +47,6 @@ Step 6: Paste URL and press enter
 - FullCalendarUI
 
 ## Contact Information
-Vyviene Spaulding
-Phone: (469)993-6763
-Email: Spauldvl@mail.uc.edu
+- Vyviene Spaulding
+- Phone: (469)993-6763
+- Email: Spauldvl@mail.uc.edu
