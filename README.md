@@ -48,5 +48,4 @@ How to start the application and view the web app (you may need to install Visua
 
 ## Contact Information
 - Vyviene Spaulding
-- Phone: (469)993-6763
 - Email: Spauldvl@mail.uc.edu
