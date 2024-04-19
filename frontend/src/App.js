@@ -16,7 +16,6 @@ function App() {
             path="/"
             element={
               <div>
-                <NewPractice />
                 <Calendar />
               </div>
             }

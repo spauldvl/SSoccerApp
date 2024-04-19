@@ -1,4 +1,3 @@
-import { Button } from "bootstrap";
 import React, { useState } from "react";
 import { Modal, Button as BootStrapButton, Form, FormGroup, FormLabel, FormControl } from "react-bootstrap";
 import axios from 'axios';
@@ -65,6 +64,7 @@ const NewPractice = () => {
   .catch(error => {
     // Handle errors
   });
+    
   }
 
   return (
