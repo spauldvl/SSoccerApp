@@ -1,4 +1,5 @@
 # SSoccer App
+All code is in the master branch
 
 Hello! I designed this application SSoccer App as my final undergraduate capstone project. This idea was brought upon by my head soccer coach at the University of Cincinnati. She was constantly wanting us to further our development by being mindful when coming to practice to improve certain aspects of out game. If you were a forward like me she asked us to keep track of stats such as shooting, crossing, goals, shots, assists, etc as well as how the practice went and what the objective of practice was. That is how I campe up with SSoccer app, a web application that allows players to keep track of their practices. This is not a scheduling app by anymeans. This is a way for players to monitor their improvements over time.
 
