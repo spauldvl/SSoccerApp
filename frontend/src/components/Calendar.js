@@ -11,6 +11,30 @@ export default class Calendar extends React.Component {
   state = { events: null };
 
   componentDidMount = async () => {
+    this.handleGetData()
+  };
+
+  renderEventContent = (eventInfo) => {
+    // Custom rendering of practice data
+    return (
+      <div>
+        <div>{eventInfo.event.title}</div>
+        <div>{eventInfo.event.extendedProps.trainingtype}</div>
+        <div>{eventInfo.event.extendedProps.trainingobjective}</div>
+        <div>{eventInfo.event.extendedProps.trainingduration}</div>
+        <div>{eventInfo.event.extendedProps.trainingdate}</div>
+        <div>{eventInfo.event.extendedProps.trainingtime}</div>
+        <div>{eventInfo.event.extendedProps.shots}</div>
+        <div>{eventInfo.event.extendedProps.crosses}</div>
+        <div>{eventInfo.event.extendedProps.goals}</div>
+        <div>{eventInfo.event.extendedProps.assists}</div>
+        
+
+      </div>
+    );
+  };
+
+  handleGetData = async() => {
     axios
       .get("/practicedata")
       .then((response) => {
@@ -30,24 +54,14 @@ export default class Calendar extends React.Component {
         // Handle errors
         console.log(error);
       });
-  };
-
-  renderEventContent = (eventInfo) => {
-    // Custom rendering of practice data
-    return (
-      <div>
-        <div>{eventInfo.event.title}</div>
-        <div>{eventInfo.event.extendedProps.trainingobjective}</div>
-      </div>
-    );
-  };
+  }
 
   render = () => {
     const { events } = this.state;
 
     return (
      <>
-      <NewPractice/>
+      <NewPractice fetchData={this.handleGetData}/>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-8">
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}

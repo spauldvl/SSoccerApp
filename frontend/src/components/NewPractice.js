@@ -6,7 +6,7 @@ import axios from 'axios';
 //the layout by adding input fields, buttons,
 //and any other elements you need.
 
-const NewPractice = () => {
+const NewPractice = ({fetchData}) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -56,10 +56,11 @@ const NewPractice = () => {
   }
 
   async function handleSubmit(){
-    console.log(trainingType, duration, date, time, shots, crosses, goals, assists)
     axios.put('/practicedata', data)
   .then(response => {
     // Handle the response
+    fetchData()
+    setShow(false)
   })
   .catch(error => {
     // Handle errors
